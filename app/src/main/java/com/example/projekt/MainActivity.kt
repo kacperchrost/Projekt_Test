@@ -39,8 +39,8 @@ class MainActivity : Activity() {
             this
         ) { position: Int -> this.onCategoryClick(position) }
         foodRV.setLayoutManager(LinearLayoutManager(this))
-        /*foodRV.adapter = productRVAdapter
-        categoryRV.setAdapter(categoryRVAdapter)*/
+        foodRV.setAdapter(productRVAdapter!!)
+        categoryRV.setAdapter(categoryRVAdapter!!)
         getCategories()
         getNews("All", getString(R.string.Country))
         //ProductRVAdapter.notifyDataSetChanged()
@@ -100,7 +100,7 @@ class MainActivity : Activity() {
     private fun getNews(category: String, country: String) {
         loadingPB!!.visibility = View.VISIBLE
         productsArrayList?.clear()
-        val categoryURL = "https://world.openfoodfacts.org/category/&category=$category"
+        val categoryURL = "https://world.openfoodfacts.org/category/$category.json"
         val url = "https://world.openfoodfacts.org/"
         val BASE_URL = "https://world.openfoodfacts.org/"
         val retrofit = Retrofit.Builder()
@@ -150,4 +150,12 @@ class MainActivity : Activity() {
         val category: String = categoryRVModalArrayList!![position].getCategory() as String
         getNews(category, getString(R.string.Country))
     }
+}
+
+private fun RecyclerView.setAdapter(categoryRVAdapter: CategoryRVAdapter): CategoryRVAdapter {
+    return categoryRVAdapter
+}
+
+private fun RecyclerView.setAdapter(productRVAdapter: ProductRVAdapter): ProductRVAdapter {
+    return productRVAdapter
 }

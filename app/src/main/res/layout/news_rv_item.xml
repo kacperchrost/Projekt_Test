@@ -13,7 +13,7 @@
         >
 
         <ImageView
-            android:id="@+id/idIVNews"
+            android:id="@+id/idIVPic"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop" />
@@ -21,8 +21,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idTVNewsHeading"
-            android:layout_below="@id/idIVNews"
+            android:id="@+id/idTVProductHeading"
+            android:layout_below="@id/idIVPic"
             android:textColor="@color/yellow"
             android:text="@string/new_heading"
             android:textStyle="bold"
@@ -30,18 +30,6 @@
             android:padding="3dp"
             android:maxLines="2"
             android:layout_margin="3dp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sub_heading"
-            android:layout_below="@id/idTVNewsHeading"
-            android:textColor="@color/white"
-            android:maxLines="3"
-            android:layout_margin="3dp"
-            android:padding="3dp"
-            android:id="@+id/idTVSubTitle"
             />
 
     </RelativeLayout>

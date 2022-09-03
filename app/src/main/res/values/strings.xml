@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Projekt</string>
+    <string name="name">Tytuł</string>
+    <string name="news_app">Żywność</string>
+    <string name="app_name">News Application</string>
+    <string name="quantity">Masa</string>
+    <string name="packaging">Opakowanie</string>
+    <string name="read_full_product">Przejdź na stronę produktu</string>
+    <string name="category">Kategorie</string>
+    <string name="new_heading">Nazwa</string>
+    <string name="sub_heading">Podtytuł</string>
+    <string name="Breakfasts">Sniadania</string>
+    <string name="Spreads">Przekąski</string>
+    <string name="SweetSpreads">Słodkie przekąski</string>
+    <string name="ChocolateSpreads">Czekoladowe przekąski</string>
+    <string name="Waters">Wody</string>
+    <string name="Beverages">Alkohol</string>
+    <string name="Juice">Sok</string>
+    <string name="Country">pl</string>
+    <string name="categories">Kategorie</string>
+    <string name="labels">Labels</string>
+    <string name="stores">W sklepach</string>
+    <string name="countries">Sprzedawane w krajach</string>
 </resources>

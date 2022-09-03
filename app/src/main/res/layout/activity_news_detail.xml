@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_shade_1"
-    tools:context=".NewsDetailActivity">
+    tools:context=".ProductDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black_shade_1"
-        app:titleTextColor="@color/yellow"
-        android:id="@+id/toolbar"
-        app:title="News App"
-        />
+        app:title="Żywność"
+        app:titleTextColor="@color/yellow" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_above="@id/idBtnReadNews"
+        android:layout_above="@id/idBtnReadProduct"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
         >
@@ -27,21 +26,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
+
             <ImageView
+                android:id="@+id/idIVPic"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/idIVNews"
                 android:layout_margin="3dp"
                 android:padding="3dp"
-                />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/title"
-                android:id="@+id/idTVTitle"
-                android:layout_below="@id/idIVNews"
+                android:text="@string/name"
+                android:id="@+id/idTVName"
+                android:layout_below="@id/idIVPic"
                 android:textColor="@color/yellow"
                 android:textStyle="bold"
                 android:textSize="20sp"
@@ -50,44 +49,111 @@
                 />
 
             <TextView
+                android:id="@+id/idTVQuantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sub_description"
-                android:layout_below="@id/idTVTitle"
-                android:layout_margin="4dp"
+                android:layout_below="@id/idTVName"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
                 android:padding="4dp"
-                android:textColor="@color/white"
-                android:id="@+id/idTVSubDesc"
-                android:textSize="18sp"
-                />
+                android:text="@string/quantity"
+                android:textColor="@color/white" />
 
             <TextView
+                android:id="@+id/idTVPackaging"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/idTVSubDesc"
-                android:id="@+id/idTVContent"
-                android:text="@string/content"
-                android:layout_margin="4dp"
+                android:layout_below="@id/idTVQuantity"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
                 android:padding="4dp"
-                android:textColor="@color/white"
-                />
+                android:text="@string/packaging"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/idTVBrands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVPackaging"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:text="@string/packaging"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/idTVCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVBrands"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:text="@string/categories"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/idTVLabels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVCategories"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:text="@string/labels"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/idTVStores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVLabels"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:text="@string/stores"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/idTVCountries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idTVStores"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="4dp"
+                android:text="@string/countries"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 
     </ScrollView>
 
     <Button
+        android:id="@+id/idBtnReadProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/read_full_news"
-        android:background="@color/yellow"
-        app:backgroundTint="@color/yellow"
-        android:textAllCaps="false"
-        android:id="@+id/idBtnReadNews"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        />
+        android:background="@color/yellow"
+        android:text="@string/read_full_product"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/yellow" />
 
 </RelativeLayout>
